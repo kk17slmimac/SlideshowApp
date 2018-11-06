@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7604B0C21916F8C00416B40 /* ヒトカゲ.png in Resources */ = {isa = PBXBuildFile; fileRef = F7604B0721916F8A00416B40 /* ヒトカゲ.png */; };
+		F7604B0D21916F8C00416B40 /* メガリザードンX.png in Resources */ = {isa = PBXBuildFile; fileRef = F7604B0821916F8A00416B40 /* メガリザードンX.png */; };
+		F7604B0E21916F8C00416B40 /* リザード.png in Resources */ = {isa = PBXBuildFile; fileRef = F7604B0921916F8B00416B40 /* リザード.png */; };
+		F7604B0F21916F8C00416B40 /* リザードン.png in Resources */ = {isa = PBXBuildFile; fileRef = F7604B0A21916F8B00416B40 /* リザードン.png */; };
+		F7604B1021916F8C00416B40 /* メガリザードンY.png in Resources */ = {isa = PBXBuildFile; fileRef = F7604B0B21916F8B00416B40 /* メガリザードンY.png */; };
 		F7E06E4B2190430B008770BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E06E4A2190430B008770BC /* AppDelegate.swift */; };
 		F7E06E4D2190430B008770BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E06E4C2190430B008770BC /* ViewController.swift */; };
 		F7E06E502190430B008770BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7E06E4E2190430B008770BC /* Main.storyboard */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F7604B0721916F8A00416B40 /* ヒトカゲ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ヒトカゲ.png"; sourceTree = "<group>"; };
+		F7604B0821916F8A00416B40 /* メガリザードンX.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "メガリザードンX.png"; sourceTree = "<group>"; };
+		F7604B0921916F8B00416B40 /* リザード.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "リザード.png"; sourceTree = "<group>"; };
+		F7604B0A21916F8B00416B40 /* リザードン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "リザードン.png"; sourceTree = "<group>"; };
+		F7604B0B21916F8B00416B40 /* メガリザードンY.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "メガリザードンY.png"; sourceTree = "<group>"; };
 		F7E06E472190430B008770BC /* SlideshowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideshowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7E06E4A2190430B008770BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7E06E4C2190430B008770BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +73,11 @@
 				F7E06E532190430C008770BC /* LaunchScreen.storyboard */,
 				F7E06E562190430D008770BC /* Info.plist */,
 				F7E06E5C219043DF008770BC /* ZoomViewController.swift */,
+				F7604B0721916F8A00416B40 /* ヒトカゲ.png */,
+				F7604B0821916F8A00416B40 /* メガリザードンX.png */,
+				F7604B0B21916F8B00416B40 /* メガリザードンY.png */,
+				F7604B0921916F8B00416B40 /* リザード.png */,
+				F7604B0A21916F8B00416B40 /* リザードン.png */,
 			);
 			path = SlideshowApp;
 			sourceTree = "<group>";
@@ -125,9 +140,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7604B1021916F8C00416B40 /* メガリザードンY.png in Resources */,
+				F7604B0E21916F8C00416B40 /* リザード.png in Resources */,
+				F7604B0D21916F8C00416B40 /* メガリザードンX.png in Resources */,
 				F7E06E552190430C008770BC /* LaunchScreen.storyboard in Resources */,
 				F7E06E522190430C008770BC /* Assets.xcassets in Resources */,
 				F7E06E502190430B008770BC /* Main.storyboard in Resources */,
+				F7604B0F21916F8C00416B40 /* リザードン.png in Resources */,
+				F7604B0C21916F8C00416B40 /* ヒトカゲ.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

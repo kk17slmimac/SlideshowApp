@@ -16,26 +16,18 @@
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhP-GZ-xUH">
-                                <rect key="frame" x="85" y="407" width="41" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9c-AL-wSr">
+                                <rect key="frame" x="277.66666666666669" y="407" width="41" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="前へ"/>
+                                <state key="normal" title="進む"/>
                                 <connections>
-                                    <action selector="tapbeforebutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cmK-IL-2C9"/>
+                                    <action selector="tapNextbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zeS-nH-mSd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYB-FR-knz">
-                                <rect key="frame" x="187" y="407" width="41" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="再生"/>
-                                <connections>
-                                    <action selector="StartStopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aax-p8-zKq"/>
-                                </connections>
-                            </button>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iab-x0-Wnn">
-                                <rect key="frame" x="85" y="70" width="244" height="184"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iab-x0-Wnn">
+                                <rect key="frame" x="50" y="87" width="314" height="167"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
@@ -44,42 +36,38 @@
                                     <outletCollection property="gestureRecognizers" destination="LZE-Ry-gjs" appends="YES" id="YcW-UF-PIU"/>
                                 </connections>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hF-a7-LQj">
-                                <rect key="frame" x="171" y="313" width="71" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhP-GZ-xUH">
+                                <rect key="frame" x="95.666666666666671" y="407" width="41.000000000000014" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="tapbeforebutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cmK-IL-2C9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYB-FR-knz">
+                                <rect key="frame" x="186.66666666666666" y="407" width="41" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="再生"/>
+                                <connections>
+                                    <action selector="StartStopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aax-p8-zKq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hF-a7-LQj">
+                                <rect key="frame" x="105" y="304" width="204" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="1" green="0.68965282017056118" blue="0.13551881616932304" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9c-AL-wSr">
-                                <rect key="frame" x="288" y="407" width="41" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="次へ"/>
-                                <connections>
-                                    <action selector="tapNextbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zeS-nH-mSd"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="KYB-FR-knz" firstAttribute="top" secondItem="8hF-a7-LQj" secondAttribute="bottom" constant="58" id="0K9-OP-09j"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Iab-x0-Wnn" secondAttribute="trailing" constant="85" id="3pE-fl-lzj"/>
-                            <constraint firstItem="MhP-GZ-xUH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="DRv-DO-x66"/>
-                            <constraint firstItem="8hF-a7-LQj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DdD-4u-gOP"/>
-                            <constraint firstItem="Iab-x0-Wnn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="OtL-7U-byy"/>
-                            <constraint firstItem="KYB-FR-knz" firstAttribute="leading" secondItem="MhP-GZ-xUH" secondAttribute="trailing" constant="61" id="RRN-hF-G1X"/>
-                            <constraint firstItem="8hF-a7-LQj" firstAttribute="top" secondItem="Iab-x0-Wnn" secondAttribute="bottom" constant="59" id="XFT-Fe-uiE"/>
-                            <constraint firstItem="m9c-AL-wSr" firstAttribute="top" secondItem="Iab-x0-Wnn" secondAttribute="bottom" constant="153" id="Ylj-mG-Dbz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="m9c-AL-wSr" secondAttribute="bottom" constant="293" id="YrT-FC-Z7H"/>
-                            <constraint firstItem="KYB-FR-knz" firstAttribute="leading" secondItem="MhP-GZ-xUH" secondAttribute="trailing" constant="61" id="bzK-ff-DeP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MhP-GZ-xUH" secondAttribute="bottom" constant="293" id="dwP-pS-0qN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KYB-FR-knz" secondAttribute="bottom" constant="293" id="hvA-fV-fqF"/>
-                            <constraint firstItem="KYB-FR-knz" firstAttribute="top" secondItem="8hF-a7-LQj" secondAttribute="bottom" constant="58" id="p0s-ON-JNd"/>
-                            <constraint firstItem="8hF-a7-LQj" firstAttribute="top" secondItem="Iab-x0-Wnn" secondAttribute="bottom" constant="59" id="qQ2-VN-BYI"/>
-                            <constraint firstItem="Iab-x0-Wnn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="s8U-KP-bhd"/>
-                            <constraint firstItem="m9c-AL-wSr" firstAttribute="leading" secondItem="KYB-FR-knz" secondAttribute="trailing" constant="60" id="sqq-no-GsT"/>
-                            <constraint firstItem="MhP-GZ-xUH" firstAttribute="top" secondItem="Iab-x0-Wnn" secondAttribute="bottom" constant="153" id="tut-CF-imh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="m9c-AL-wSr" secondAttribute="trailing" constant="85" id="u6i-C8-Vi2"/>
-                            <constraint firstItem="m9c-AL-wSr" firstAttribute="leading" secondItem="KYB-FR-knz" secondAttribute="trailing" constant="60" id="ySJ-k1-WRf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Iab-x0-Wnn" secondAttribute="trailing" constant="50" id="0kY-v0-ZfE"/>
+                            <constraint firstItem="KYB-FR-knz" firstAttribute="leading" secondItem="MhP-GZ-xUH" secondAttribute="trailing" constant="50" id="DZq-M3-x1G"/>
+                            <constraint firstItem="Iab-x0-Wnn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Por-QF-13X"/>
+                            <constraint firstItem="KYB-FR-knz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VSQ-24-rTM"/>
+                            <constraint firstItem="m9c-AL-wSr" firstAttribute="leading" secondItem="KYB-FR-knz" secondAttribute="trailing" constant="50" id="b5m-XJ-qVj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8hF-a7-LQj" secondAttribute="trailing" constant="105" id="mHr-Vm-1hS"/>
+                            <constraint firstItem="8hF-a7-LQj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105" id="pbU-bG-RKw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

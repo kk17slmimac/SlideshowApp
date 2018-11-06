@@ -41,17 +41,19 @@ class ViewController: UIViewController {
     
     //次へボタンを押した時に次の画像に切り替わる
     @IBAction func tapNextbutton(_ sender: Any) {
-        //カウンターを+1して配列から画像を取り出す
-        counter += 1
-        ImageSpace.image = UIImage(named: imagelist[counter])
-        image_name.text = imagelist[counter]
         
         let max: Int = imagelist.count
-        //カウンターがMaxまでいったらがcountを0にする
-        if counter == max-1{
-            counter = -1
+
+        //counterがmaxより小さければcounterを+1
+        if counter < max-1{
+            counter += 1
+            
+        }else if counter == max-1{
+            counter = 0
         }
         
+        ImageSpace.image = UIImage(named: imagelist[counter])
+        image_name.text = imagelist[counter]
     }
     
     
@@ -98,21 +100,23 @@ class ViewController: UIViewController {
     }
     
     @objc func updateTimer(_ timer: Timer) {
-        counter += 1
+        let max: Int = imagelist.count
+        //counterがmax-1(配列の最後)より小さければcounterを+1
+        if counter < max-1{
+            counter += 1
+        }else if counter == max-1{
+            counter = 0
+        }
         ImageSpace.image = UIImage(named: imagelist[counter])
         image_name.text = imagelist[counter]
-        if counter == 4{
-            counter = -1
-        }
+        
         
     }
     
     
     @IBAction func onTapimage(_ sender: Any) {
         // セグエを使用して画面を遷移
-        performSegue(withIdentifier: "zoom", sender: nil)
-        print("onTapImage")
-        
+        performSegue(withIdentifier: "zoom", sender: nil)        
     }
     
     //画面遷移の際に渡すもの
@@ -120,10 +124,16 @@ class ViewController: UIViewController {
         let zoomviewcontroller:ZoomViewController = segue.destination as! ZoomViewController
         zoomviewcontroller.ReciveImage = imagelist[counter]
         zoomviewcontroller.RecieveName = image_name.text
+        //画面遷移の際にタイマーを停止
+        self.timer?.invalidate()
     }
     
     //遷移先の画面から戻ってきた時に呼ばれるメソッド
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
+        
+        //タイマー始動
+        self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
+        
     }
      
 
