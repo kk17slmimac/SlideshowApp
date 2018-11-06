@@ -124,16 +124,17 @@ class ViewController: UIViewController {
         let zoomviewcontroller:ZoomViewController = segue.destination as! ZoomViewController
         zoomviewcontroller.ReciveImage = imagelist[counter]
         zoomviewcontroller.RecieveName = image_name.text
-        //画面遷移の際にタイマーを停止
+        //「停止」のまま画像が動き動き続けることや、画面遷移から戻ってきた際に
+        //画像が動いていないのに「停止」→「再生」ボタンを押し、再度再生させるのが不自然な為
+        //画面遷移する際にタイマーを止め、「停止」ボタンから「再生」ボタンに
         self.timer?.invalidate()
+        startstopbutton.setTitle("再生", for: .normal)
+        beforebutton.isEnabled = true
+        nextbutton.isEnabled = true
     }
     
     //遷移先の画面から戻ってきた時に呼ばれるメソッド
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
-        
-        //タイマー始動
-        self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
-        
     }
      
 
